@@ -1,0 +1,24 @@
+{
+  "name": "budget-mate-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "NODE_ENV=development node --enable-source-maps src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "joi": "^18.0.1",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.1",
+    "pg": "^8.16.3"
+  }
+}
