@@ -3,7 +3,7 @@ const router = express.Router();
 const db = require('../db');
 const { incomeSchema } = require('../validators');
 
-// POST /api/incomes
+// POST /api/income
 
 router.post('/', async (req, res) => {
   const { error, value } = incomeSchema.validate(req.body, { stripUnknown: true });
