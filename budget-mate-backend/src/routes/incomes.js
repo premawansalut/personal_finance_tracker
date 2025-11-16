@@ -1,32 +1,3 @@
-/*const express = require('express');
-const router = express.Router();
-const db = require('../db');
-const { incomeSchema } = require('../validators');
-
-router.post('/', async (req, res) => {
-  const { error, value } = incomeSchema.validate(req.body, { stripUnknown: true });
-  if (error) return res.status(400).json({ error: error.details.map(d => d.message) });
-
-  const { amount, category, note } = value;
-
-  const queryText = `
-    INSERT INTO incomes (amount, category, note)
-    VALUES ($1, $2, $3)
-    RETURNING id, amount, category, note, created_at;
-  `;
-
-  try {
-    const { rows } = await db.query(queryText, [amount, category, note || null]);
-    return res.status(201).json({ data: rows[0] });
-  } catch (err) {
-    console.error('Insert income error', err);
-    return res.status(500).json({ error: 'Internal server error' });
-  }
-});
-
-module.exports = router;
-*/
-
 const express = require('express');
 const router = express.Router();
 const db = require('../db');
